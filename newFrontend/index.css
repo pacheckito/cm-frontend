@@ -1,0 +1,476 @@
+element.style {
+    scroll-behavior: smooth;
+}
+
+/* TaskBar */
+
+.nav-logo {
+  position: relative; /* Make the logo's position relative */
+  z-index: 0; /* Set the z-index to a lower value */
+}
+
+.logo {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  position: relative; /* Make the logo's position relative */
+  margin-left: 50px;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background: white;
+    border-bottom: 1px solid black;
+}
+
+.top-bar .nav-link {
+    color: black; /* Add this rule to make the text black */
+}
+
+.top-bar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0px 30px 0px 20px;
+}
+
+.top-bar li {
+    margin: 0px 10px;
+}
+
+@media (max-width: 768px) {
+    .top-bar ul {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        height: 0.8em;
+    }
+}
+
+.top-bar a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.05em;
+    text-decoration: none;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.top-bar a {
+    font-size: 0.8em;
+}
+
+.top-bar a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.05em;
+    text-decoration: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.top-bar a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.05em;
+    text-decoration: none;
+}
+
+.signin-btn {
+    background-color: rgb(48, 159, 203);
+    color: white;
+    margin-top: 100px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.signin-btn:hover {
+    color: black;
+}
+
+.top-bar a:hover {
+    color: black; 
+}
+
+
+/* General Home Page */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.home {
+    position: relative;
+    height: 110vh;
+    background-color: black;
+    background-image: url('images/consulting-background.jpg');
+    background-size: cover;
+    image-rendering: auto;
+    overflow: hidden; /* Add this to hide the pseudo-element overflow */
+
+    /* Add the pseudo-element for the blue tint overlay */
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(55, 55, 182, 0.3);
+        /* z-index: 1; Adjust the z-index as needed */
+    }
+}
+/* WORK ON THIS */
+
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.c-1 {
+    width: 850px; /* this is hard coded not sure how it will work on other devices */
+    height: 280px;
+    position: absolute;
+    top: 37%;
+    left: 13%;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.c-1-header {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4.5em;
+    margin: 0; 
+}
+
+.c-1-text {
+    font-size: 1em;
+    margin: 0; 
+}
+
+.c-1-text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.03em;
+    margin: 0; 
+}
+
+@media (max-width: 768px) {
+    .c-1-btn, .signin-btn {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
+
+.c-1-btn {
+    background-color: rgb(48, 159, 203);
+    color: rgb(255, 255, 255);
+    margin-left: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 10px;
+    position: absolute;
+    text-decoration: none;
+    padding: 40px 60px; /* Increased padding for a much larger button */
+    border-radius: 40px;
+    transition: color 0.2s, transform 0.2s; /* Added transition property for color and transform */
+}
+
+.c-1-btn:hover {
+    color: rgb(240, 233, 233);
+    transform: translateX(5px);
+    transform: translateY(-5px);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.about {
+    background-color: rgb(235, 235, 235);
+    height: 400vh;
+    display: flex;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.about-left {
+    background-color: rgb(235, 235, 235);
+    width: 45%;
+    height: 100vh;
+    display: flex;
+    padding: 20px;
+    margin: 0px !important;
+}
+
+@media (max-width: 768px) {
+    .one, .two {
+        font-size: 20px;
+        margin-left: 5%;
+    }
+}
+
+.one {
+    font-family: Arial, Helvetica, sans-serif;
+    transform: rotate(270deg);
+    font-size: 30px;
+    position: absolute;
+    margin-left: 23%;
+    margin-top: 170px;
+    letter-spacing: 0.2em;
+}
+
+.two {
+    font-family: Arial, Helvetica, sans-serif;
+    transform: rotate(270deg);
+    font-size: 30px;
+    position: absolute;
+    margin-left: 23%;
+    margin-top: 420px;
+    letter-spacing: 0.2em;
+}
+
+.three {
+    font-family: Arial, Helvetica, sans-serif;
+    transform: rotate(270deg);
+    font-size: 30px;
+    position: absolute;
+    margin-left: 23%;
+    margin-top: 670px;
+    letter-spacing: 0.2em;
+}
+
+/* cahnge this */
+.case-interview, .feedback, .result {
+    font-size: 50px;
+    margin-left: 17%;
+}
+
+.case-interview {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    margin-top: 150px;
+    margin-left: 35%;
+    position: absolute;
+}
+
+element.style {
+    opacity: 0.7376;
+}
+
+.feedback {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    margin-top: 400px;
+    margin-left: 35%;
+    position: absolute;
+}
+
+.result {
+    font-family: Alatsi, sans-serif;
+    font-size: 75px;
+    margin-top: 650px;
+    margin-left: 35%;
+    position: absolute;
+}
+
+.about-right {
+    width: 55%;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.about-right div {
+    background-color: rgb(235, 235, 235);
+    overflow-y: scroll;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.about-p {
+    font-size: 15px;
+    margin-left: 10px;
+    width: 90%;
+    line-height: 170%;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .about-p {
+        font-size: 15px;
+        margin-left: 10px;
+        width: 90%;
+        line-height: 170%;
+        letter-spacing: 0.05em;
+    }
+}
+
+.about-p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    width: 70%;
+    line-height: 170%;
+    letter-spacing: 0.05em;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+/* HANDLING IMAGES */
+.case-interview-img {
+    height: auto;
+    width: 85%;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.case-img {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 75%;
+    border-radius: 50%;
+}
+
+.feedback-img {
+    display: block; /* Make the image a block-level element */
+    margin: 0 auto; /* Center horizontally */
+    height: auto;
+    width: 75%;
+}
+
+.result-img {
+    height: auto;
+    width: 85%;
+}
+
+
+/* HANDLING TEXT */
+.atlas {
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+}
+
+.atlas-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.atlas-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.atlas-h {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 72px;
+  color: black;
+  margin-bottom: 10px;
+  padding-top: 100px;
+  padding-bottom: 25px;
+}
+
+.atlas-text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  color: black;
+  margin-bottom: 10px; /* Reduce the margin between paragraphs */
+  padding-right: 150px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.atlas-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the logos horizontally */
+  align-items: center; /* Center the logos vertically */
+  padding-right: 100px;
+  padding-top: 200px;
+}
+
+.atlas-logos img {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+
+
+.atlas-contact h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 50px;
+  font-size: 24px;
+  color: black;
+}
+
+.atlas-contact p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: black;
+
+}
